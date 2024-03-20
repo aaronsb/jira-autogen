@@ -1,0 +1,21 @@
+# IssuesMetaBean
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Jql** | [**IssuesJqlMetaDataBean**](IssuesJqlMetaDataBean.md) |  | [optional] 
+
+## Examples
+
+- Prepare the resource
+```powershell
+$IssuesMetaBean = Initialize-PSJiraIssuesMetaBean  -Jql null
+```
+
+- Convert the resource to JSON
+```powershell
+$IssuesMetaBean | ConvertTo-JSON
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
