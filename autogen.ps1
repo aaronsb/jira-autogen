@@ -20,7 +20,7 @@ npx openapi-generator-cli generate -i $OpenAPIURI -o . -g powershell --additiona
 Write-Host "Patching bugs from raw swagger"
 
 patch ./src/PSJira/Model/LinkedIssueFields.ps1 ./LinkedIssueFields.patch
-patch ./src/PSJira/Model/Fields.ps1 ./Fields.patch"
+patch ./src/PSJira/Model/Fields.ps1 ./Fields.patch
 
 Write-Host "Building Module"
 
