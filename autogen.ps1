@@ -17,11 +17,13 @@ npx openapi-generator-cli generate -i $OpenAPIURI -o . -g powershell --additiona
 #gci -r | ?{$_.GetType().Name -eq "FileInfo"} | %{Find-InTextFile -FilePath $_ -Find 'AlignApi2' -Replace 'getAlign'}
 #Get-ChildItem -File -Recurse | % { Rename-Item -Path $_.PSPath -NewName $_.Name.replace("Invoke-AlignApi2","Invoke-Align")}
 
-Write-Host "Some manual intervention is required when running autogen."
-gc fixups.txt
-Write-Host "Press any key to continue..."
+Write-Host "Patching bugs from raw swagger"
 
-$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+patch ./src/PSJira/Model/LinkedIssueFields.ps1 ./LinkedIssueFields.patch
+patch ./src/PSJira/Model/Fields.ps1 ./Fields.patch"
+
+Write-Host "Building Module"
+
 ./Build.ps1
 import-module -Name ./src/PSJira/ -Verbose
 

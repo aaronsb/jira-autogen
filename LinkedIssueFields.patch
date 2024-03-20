@@ -1,0 +1,63 @@
+diff --git a/src/PSJira/Model/LinkedIssueFields.ps1 b/src/PSJira/Model/LinkedIssueFields.ps1
+index db1aa67..38d9904 100644
+--- a/src/PSJira/Model/LinkedIssueFields.ps1
++++ b/src/PSJira/Model/LinkedIssueFields.ps1
+@@ -19,8 +19,6 @@ The fields associated with the issue.
+ No description available.
+ .PARAMETER IssueType
+ No description available.
+-.PARAMETER Issuetype
+-No description available.
+ .PARAMETER Priority
+ No description available.
+ .PARAMETER Status
+@@ -45,17 +43,14 @@ function Initialize-LinkedIssueFields {
+         ${IssueType},
+         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
+         [PSCustomObject]
+-        ${Issuetype},
+-        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
+-        [PSCustomObject]
+         ${Priority},
+-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
++        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
+         [PSCustomObject]
+         ${Status},
+-        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
++        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
+         [String]
+         ${Summary},
+-        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
++        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
+         [PSCustomObject]
+         ${Timetracking}
+     )
+@@ -68,7 +63,6 @@ function Initialize-LinkedIssueFields {
+         $PSO = [PSCustomObject]@{
+             "assignee" = ${Assignee}
+             "issueType" = ${IssueType}
+-            "issuetype" = ${Issuetype}
+             "priority" = ${Priority}
+             "status" = ${Status}
+             "summary" = ${Summary}
+@@ -129,12 +123,6 @@ function ConvertFrom-JsonToLinkedIssueFields {
+             $IssueType = $JsonParameters.PSobject.Properties["issueType"].value
+         }
+ 
+-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "issuetype"))) { #optional property not found
+-            $Issuetype = $null
+-        } else {
+-            $Issuetype = $JsonParameters.PSobject.Properties["issuetype"].value
+-        }
+-
+         if (!([bool]($JsonParameters.PSobject.Properties.name -match "priority"))) { #optional property not found
+             $Priority = $null
+         } else {
+@@ -162,7 +150,6 @@ function ConvertFrom-JsonToLinkedIssueFields {
+         $PSO = [PSCustomObject]@{
+             "assignee" = ${Assignee}
+             "issueType" = ${IssueType}
+-            "issuetype" = ${Issuetype}
+             "priority" = ${Priority}
+             "status" = ${Status}
+             "summary" = ${Summary}
