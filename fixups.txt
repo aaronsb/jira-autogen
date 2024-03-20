@@ -1,0 +1,3 @@
+before running build.ps1
+remove references to duplicate issueType parameter in /src/PSJira/Model/Fields.ps1
+remove references to duplicate issueType parameter in /src/PSJira/Model/LinkedIssueFields.ps1
