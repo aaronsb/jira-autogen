@@ -38,7 +38,7 @@ cd ./docs
 cd $workingRoot
 cd ./tests
 @("Get","Set","Put","Patch","Post") | %{Rename-FunctionVerb -Verb $_ -Confirm -verbose}
-
+cd $workingRoot
 
 
 import-module -Name ./src/PSJira/ -Verbose -Force
