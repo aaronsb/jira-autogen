@@ -29,7 +29,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 AnyType
 #>
-function Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut {
+function Put-AppIssueFieldValueUpdateResourceUpdateIssueFields {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -43,7 +43,7 @@ function Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut {
     )
 
     Process {
-        'Calling method: Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut' | Write-Debug
+        'Calling method: Put-AppIssueFieldValueUpdateResourceUpdateIssueFields' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -121,7 +121,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 None
 #>
-function Invoke-MigrationResourceUpdateEntityPropertiesValuePut {
+function Put-MigrationResourceUpdateEntityPropertiesValue {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -139,7 +139,7 @@ function Invoke-MigrationResourceUpdateEntityPropertiesValuePut {
     )
 
     Process {
-        'Calling method: Invoke-MigrationResourceUpdateEntityPropertiesValuePut' | Write-Debug
+        'Calling method: Put-MigrationResourceUpdateEntityPropertiesValue' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -215,7 +215,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 WorkflowRulesSearchDetails
 #>
-function Invoke-MigrationResourceWorkflowRuleSearchPost {
+function Post-MigrationResourceWorkflowRuleSearch {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -229,7 +229,7 @@ function Invoke-MigrationResourceWorkflowRuleSearchPost {
     )
 
     Process {
-        'Calling method: Invoke-MigrationResourceWorkflowRuleSearchPost' | Write-Debug
+        'Calling method: Post-MigrationResourceWorkflowRuleSearch' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()

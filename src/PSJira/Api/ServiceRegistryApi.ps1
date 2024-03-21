@@ -26,7 +26,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 ServiceRegistry[]
 #>
-function Invoke-ServiceRegistryResourceServicesGet {
+function Get-ServiceRegistryResourceServices {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -37,7 +37,7 @@ function Invoke-ServiceRegistryResourceServicesGet {
     )
 
     Process {
-        'Calling method: Invoke-ServiceRegistryResourceServicesGet' | Write-Debug
+        'Calling method: Get-ServiceRegistryResourceServices' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()

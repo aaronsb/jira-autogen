@@ -7,17 +7,17 @@
 #
 
 Describe -tag 'PSJira' -name 'DynamicModulesApi' {
-    Context 'Invoke-DynamicModulesResourceGetModulesGet' {
-        It 'Test Invoke-DynamicModulesResourceGetModulesGet' {
-            #$TestResult = Invoke-DynamicModulesResourceGetModulesGet
+    Context 'Get-DynamicModulesResourceModules' {
+        It 'Test Get-DynamicModulesResourceModules' {
+            #$TestResult = Get-DynamicModulesResourceModules
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DynamicModulesResourceRegisterModulesPost' {
-        It 'Test Invoke-DynamicModulesResourceRegisterModulesPost' {
-            #$TestResult = Invoke-DynamicModulesResourceRegisterModulesPost -ConnectModules "TEST_VALUE"
+    Context 'Post-DynamicModulesResourceRegisterModules' {
+        It 'Test Post-DynamicModulesResourceRegisterModules' {
+            #$TestResult = Post-DynamicModulesResourceRegisterModules -ConnectModules "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

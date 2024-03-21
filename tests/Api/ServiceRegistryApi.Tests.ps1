@@ -7,9 +7,9 @@
 #
 
 Describe -tag 'PSJira' -name 'ServiceRegistryApi' {
-    Context 'Invoke-ServiceRegistryResourceServicesGet' {
-        It 'Test Invoke-ServiceRegistryResourceServicesGet' {
-            #$TestResult = Invoke-ServiceRegistryResourceServicesGet -ServiceIds "TEST_VALUE"
+    Context 'Get-ServiceRegistryResourceServices' {
+        It 'Test Get-ServiceRegistryResourceServices' {
+            #$TestResult = Get-ServiceRegistryResourceServices -ServiceIds "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

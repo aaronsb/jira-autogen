@@ -7,25 +7,25 @@
 #
 
 Describe -tag 'PSJira' -name 'AppMigrationApi' {
-    Context 'Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut' {
-        It 'Test Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut' {
-            #$TestResult = Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut -AtlassianTransferId "TEST_VALUE" -ConnectCustomFieldValues "TEST_VALUE"
+    Context 'Put-AppIssueFieldValueUpdateResourceUpdateIssueFields' {
+        It 'Test Put-AppIssueFieldValueUpdateResourceUpdateIssueFields' {
+            #$TestResult = Put-AppIssueFieldValueUpdateResourceUpdateIssueFields -AtlassianTransferId "TEST_VALUE" -ConnectCustomFieldValues "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-MigrationResourceUpdateEntityPropertiesValuePut' {
-        It 'Test Invoke-MigrationResourceUpdateEntityPropertiesValuePut' {
-            #$TestResult = Invoke-MigrationResourceUpdateEntityPropertiesValuePut -AtlassianTransferId "TEST_VALUE" -EntityType "TEST_VALUE" -EntityPropertyDetails "TEST_VALUE"
+    Context 'Put-MigrationResourceUpdateEntityPropertiesValue' {
+        It 'Test Put-MigrationResourceUpdateEntityPropertiesValue' {
+            #$TestResult = Put-MigrationResourceUpdateEntityPropertiesValue -AtlassianTransferId "TEST_VALUE" -EntityType "TEST_VALUE" -EntityPropertyDetails "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-MigrationResourceWorkflowRuleSearchPost' {
-        It 'Test Invoke-MigrationResourceWorkflowRuleSearchPost' {
-            #$TestResult = Invoke-MigrationResourceWorkflowRuleSearchPost -AtlassianTransferId "TEST_VALUE" -WorkflowRulesSearch "TEST_VALUE"
+    Context 'Post-MigrationResourceWorkflowRuleSearch' {
+        It 'Test Post-MigrationResourceWorkflowRuleSearch' {
+            #$TestResult = Post-MigrationResourceWorkflowRuleSearch -AtlassianTransferId "TEST_VALUE" -WorkflowRulesSearch "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

@@ -60,7 +60,7 @@ $Manifest = @{
     ModuleVersion = '0.1.2'
 
     RootModule = 'PSJira.psm1'
-    Guid = '{F4A41030-4600-406A-A867-B10E151F16F8}' # Has to be static, otherwise each new build will be considered different module
+    Guid = '{A8007933-7A3C-4CDF-9DB1-4CC1131CF5EE}' # Has to be static, otherwise each new build will be considered different module
 
     PowerShellVersion = '6.2'
 

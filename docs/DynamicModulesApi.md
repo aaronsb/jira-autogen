@@ -4,14 +4,14 @@ All URIs are relative to *https://your-domain.atlassian.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-DynamicModulesResourceGetModulesGet**](DynamicModulesApi.md#Invoke-DynamicModulesResourceGetModulesGet) | **GET** /rest/atlassian-connect/1/app/module/dynamic | Get modules
-[**Invoke-DynamicModulesResourceRegisterModulesPost**](DynamicModulesApi.md#Invoke-DynamicModulesResourceRegisterModulesPost) | **POST** /rest/atlassian-connect/1/app/module/dynamic | Register modules
+[**Get-DynamicModulesResourceModules**](DynamicModulesApi.md#Get-DynamicModulesResourceModules) | **GET** /rest/atlassian-connect/1/app/module/dynamic | Get modules
+[**Post-DynamicModulesResourceRegisterModules**](DynamicModulesApi.md#Post-DynamicModulesResourceRegisterModules) | **POST** /rest/atlassian-connect/1/app/module/dynamic | Register modules
 [**Invoke-DynamicModulesResourceRemoveModulesDelete**](DynamicModulesApi.md#Invoke-DynamicModulesResourceRemoveModulesDelete) | **DELETE** /rest/atlassian-connect/1/app/module/dynamic | Remove modules
 
 
-<a id="Invoke-DynamicModulesResourceGetModulesGet"></a>
-# **Invoke-DynamicModulesResourceGetModulesGet**
-> ConnectModules Invoke-DynamicModulesResourceGetModulesGet<br>
+<a id="Get-DynamicModulesResourceModules"></a>
+# **Get-DynamicModulesResourceModules**
+> ConnectModules Get-DynamicModulesResourceModules<br>
 
 Get modules
 
@@ -22,9 +22,9 @@ Returns all modules registered dynamically by the calling app.  **[Permissions](
 
 # Get modules
 try {
-    $Result = Invoke-DynamicModulesResourceGetModulesGet
+    $Result = Get-DynamicModulesResourceModules
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DynamicModulesResourceGetModulesGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Get-DynamicModulesResourceModules: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -47,9 +47,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="Invoke-DynamicModulesResourceRegisterModulesPost"></a>
-# **Invoke-DynamicModulesResourceRegisterModulesPost**
-> void Invoke-DynamicModulesResourceRegisterModulesPost<br>
+<a id="Post-DynamicModulesResourceRegisterModules"></a>
+# **Post-DynamicModulesResourceRegisterModules**
+> void Post-DynamicModulesResourceRegisterModules<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ConnectModules] <PSCustomObject><br>
 
 Register modules
@@ -62,9 +62,9 @@ $ConnectModules = Initialize-ConnectModules -Modules # ConnectModules |
 
 # Register modules
 try {
-    $Result = Invoke-DynamicModulesResourceRegisterModulesPost -ConnectModules $ConnectModules
+    $Result = Post-DynamicModulesResourceRegisterModules -ConnectModules $ConnectModules
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DynamicModulesResourceRegisterModulesPost: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Post-DynamicModulesResourceRegisterModules: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```

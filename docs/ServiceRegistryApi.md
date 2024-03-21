@@ -4,12 +4,12 @@ All URIs are relative to *https://your-domain.atlassian.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-ServiceRegistryResourceServicesGet**](ServiceRegistryApi.md#Invoke-ServiceRegistryResourceServicesGet) | **GET** /rest/atlassian-connect/1/service-registry | Retrieve the attributes of service registries
+[**Get-ServiceRegistryResourceServices**](ServiceRegistryApi.md#Get-ServiceRegistryResourceServices) | **GET** /rest/atlassian-connect/1/service-registry | Retrieve the attributes of service registries
 
 
-<a id="Invoke-ServiceRegistryResourceServicesGet"></a>
-# **Invoke-ServiceRegistryResourceServicesGet**
-> ServiceRegistry[] Invoke-ServiceRegistryResourceServicesGet<br>
+<a id="Get-ServiceRegistryResourceServices"></a>
+# **Get-ServiceRegistryResourceServices**
+> ServiceRegistry[] Get-ServiceRegistryResourceServices<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ServiceIds] <String[]><br>
 
 Retrieve the attributes of service registries
@@ -22,9 +22,9 @@ $ServiceIds = "MyServiceIds" # String[] | The ID of the services (the strings st
 
 # Retrieve the attributes of service registries
 try {
-    $Result = Invoke-ServiceRegistryResourceServicesGet -ServiceIds $ServiceIds
+    $Result = Get-ServiceRegistryResourceServices -ServiceIds $ServiceIds
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-ServiceRegistryResourceServicesGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Get-ServiceRegistryResourceServices: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```

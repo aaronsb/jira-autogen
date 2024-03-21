@@ -23,7 +23,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 ConnectModules
 #>
-function Invoke-DynamicModulesResourceGetModulesGet {
+function Get-DynamicModulesResourceModules {
     [CmdletBinding()]
     Param (
         [Switch]
@@ -31,7 +31,7 @@ function Invoke-DynamicModulesResourceGetModulesGet {
     )
 
     Process {
-        'Calling method: Invoke-DynamicModulesResourceGetModulesGet' | Write-Debug
+        'Calling method: Get-DynamicModulesResourceModules' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -89,7 +89,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 None
 #>
-function Invoke-DynamicModulesResourceRegisterModulesPost {
+function Post-DynamicModulesResourceRegisterModules {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -100,7 +100,7 @@ function Invoke-DynamicModulesResourceRegisterModulesPost {
     )
 
     Process {
-        'Calling method: Invoke-DynamicModulesResourceRegisterModulesPost' | Write-Debug
+        'Calling method: Post-DynamicModulesResourceRegisterModules' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()

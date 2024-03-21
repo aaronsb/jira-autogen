@@ -4,14 +4,14 @@ All URIs are relative to *https://your-domain.atlassian.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut**](AppMigrationApi.md#Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut) | **PUT** /rest/atlassian-connect/1/migration/field | Bulk update custom field value
-[**Invoke-MigrationResourceUpdateEntityPropertiesValuePut**](AppMigrationApi.md#Invoke-MigrationResourceUpdateEntityPropertiesValuePut) | **PUT** /rest/atlassian-connect/1/migration/properties/{entityType} | Bulk update entity properties
-[**Invoke-MigrationResourceWorkflowRuleSearchPost**](AppMigrationApi.md#Invoke-MigrationResourceWorkflowRuleSearchPost) | **POST** /rest/atlassian-connect/1/migration/workflow/rule/search | Get workflow transition rule configurations
+[**Put-AppIssueFieldValueUpdateResourceUpdateIssueFields**](AppMigrationApi.md#Put-AppIssueFieldValueUpdateResourceUpdateIssueFields) | **PUT** /rest/atlassian-connect/1/migration/field | Bulk update custom field value
+[**Put-MigrationResourceUpdateEntityPropertiesValue**](AppMigrationApi.md#Put-MigrationResourceUpdateEntityPropertiesValue) | **PUT** /rest/atlassian-connect/1/migration/properties/{entityType} | Bulk update entity properties
+[**Post-MigrationResourceWorkflowRuleSearch**](AppMigrationApi.md#Post-MigrationResourceWorkflowRuleSearch) | **POST** /rest/atlassian-connect/1/migration/workflow/rule/search | Get workflow transition rule configurations
 
 
-<a id="Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut"></a>
-# **Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut**
-> AnyType Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut<br>
+<a id="Put-AppIssueFieldValueUpdateResourceUpdateIssueFields"></a>
+# **Put-AppIssueFieldValueUpdateResourceUpdateIssueFields**
+> AnyType Put-AppIssueFieldValueUpdateResourceUpdateIssueFields<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-AtlassianTransferId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ConnectCustomFieldValues] <PSCustomObject><br>
 
@@ -27,9 +27,9 @@ $ConnectCustomFieldValues = Initialize-ConnectCustomFieldValues -UpdateValueList
 
 # Bulk update custom field value
 try {
-    $Result = Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut -AtlassianTransferId $AtlassianTransferId -ConnectCustomFieldValues $ConnectCustomFieldValues
+    $Result = Put-AppIssueFieldValueUpdateResourceUpdateIssueFields -AtlassianTransferId $AtlassianTransferId -ConnectCustomFieldValues $ConnectCustomFieldValues
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-AppIssueFieldValueUpdateResourceUpdateIssueFieldsPut: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Put-AppIssueFieldValueUpdateResourceUpdateIssueFields: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -56,9 +56,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="Invoke-MigrationResourceUpdateEntityPropertiesValuePut"></a>
-# **Invoke-MigrationResourceUpdateEntityPropertiesValuePut**
-> void Invoke-MigrationResourceUpdateEntityPropertiesValuePut<br>
+<a id="Put-MigrationResourceUpdateEntityPropertiesValue"></a>
+# **Put-MigrationResourceUpdateEntityPropertiesValue**
+> void Put-MigrationResourceUpdateEntityPropertiesValue<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-AtlassianTransferId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EntityType] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EntityPropertyDetails] <PSCustomObject[]><br>
@@ -75,9 +75,9 @@ $EntityPropertyDetails = Initialize-EntityPropertyDetails -EntityId 123 -Key "my
 
 # Bulk update entity properties
 try {
-    $Result = Invoke-MigrationResourceUpdateEntityPropertiesValuePut -AtlassianTransferId $AtlassianTransferId -EntityType $EntityType -EntityPropertyDetails $EntityPropertyDetails
+    $Result = Put-MigrationResourceUpdateEntityPropertiesValue -AtlassianTransferId $AtlassianTransferId -EntityType $EntityType -EntityPropertyDetails $EntityPropertyDetails
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-MigrationResourceUpdateEntityPropertiesValuePut: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Put-MigrationResourceUpdateEntityPropertiesValue: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -105,9 +105,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="Invoke-MigrationResourceWorkflowRuleSearchPost"></a>
-# **Invoke-MigrationResourceWorkflowRuleSearchPost**
-> WorkflowRulesSearchDetails Invoke-MigrationResourceWorkflowRuleSearchPost<br>
+<a id="Post-MigrationResourceWorkflowRuleSearch"></a>
+# **Post-MigrationResourceWorkflowRuleSearch**
+> WorkflowRulesSearchDetails Post-MigrationResourceWorkflowRuleSearch<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-AtlassianTransferId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkflowRulesSearch] <PSCustomObject><br>
 
@@ -122,9 +122,9 @@ $WorkflowRulesSearch = Initialize-WorkflowRulesSearch -Expand "transition" -Rule
 
 # Get workflow transition rule configurations
 try {
-    $Result = Invoke-MigrationResourceWorkflowRuleSearchPost -AtlassianTransferId $AtlassianTransferId -WorkflowRulesSearch $WorkflowRulesSearch
+    $Result = Post-MigrationResourceWorkflowRuleSearch -AtlassianTransferId $AtlassianTransferId -WorkflowRulesSearch $WorkflowRulesSearch
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-MigrationResourceWorkflowRuleSearchPost: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Post-MigrationResourceWorkflowRuleSearch: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
